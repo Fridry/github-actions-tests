@@ -12,4 +12,10 @@ describe("Github Actions tests", () => {
 
     expect(greeting).toBe("Hey Eduardo, how are you?");
   });
+
+  test("should ask the name if no name is provided", () => {
+    const greeting = sayHello("Henry");
+
+    expect(greeting).toBe("Hey man, what's your name again?");
+  });
 });
