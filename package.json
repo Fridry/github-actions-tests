@@ -1,0 +1,14 @@
+{
+  "name": "github-actions-tests",
+  "version": "1.0.0",
+  "description": "Demo for using Github Actions",
+  "main": "index.js",
+  "author": "Fridry",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
