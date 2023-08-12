@@ -1,21 +1,52 @@
-const { sayHello } = require("./index");
+const {
+  addition,
+  subtraction,
+  multiplication,
+  division,
+  rest,
+  checkNumbers,
+} = require("./index");
 
 describe("Github Actions tests", () => {
-  test("should ask the name if no name is provided", () => {
-    const greeting = sayHello();
+  it("should sum", () => {
+    const result = addition(2, 2);
 
-    expect(greeting).toBe("Hey man, what's your name again?");
+    expect(result).toBe(4);
   });
 
-  test("should return a greeting if name is provided", () => {
-    const greeting = sayHello("Eduardo");
+  it("should subtract", () => {
+    const result = subtraction(2, 2);
 
-    expect(greeting).toBe("Hey Eduardo, how are you?");
+    expect(result).toBe(0);
   });
 
-  test("should ask the name if no name is provided", () => {
-    const greeting = sayHello("Henry");
+  it("should multiply", () => {
+    const result = multiplication(2, 2);
 
-    expect(greeting).toBe("Hey man, what's your name again?");
+    expect(result).toBe(4);
+  });
+
+  it("should divide", () => {
+    const result = division(2, 2);
+
+    expect(result).toBe(1);
+  });
+
+  it("should return the rest", () => {
+    const result = rest(2, 2);
+
+    expect(result).toBe(0);
+  });
+
+  it("should return the invalid message", () => {
+    const result = addition("a", 2);
+
+    expect(result).toBe("Invalid values");
+  });
+
+  it("should check the numbers", () => {
+    const result = checkNumbers("a", 2);
+
+    expect(result).toBe("Invalid values");
   });
 });
